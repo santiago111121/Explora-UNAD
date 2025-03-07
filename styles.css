@@ -1,0 +1,298 @@
+/* --- Estilos Generales --- */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('multimedia/imagenes/EDF.png'); /* Ruta de la imagen */
+  background-size: cover; /* Ajusta la imagen sin deformarla */
+  background-position: center; /* Centra la imagen */
+}
+
+/* --- Barra Superior con Logo e Icono de Opciones --- */
+/* Barra superior */
+ /* Barra superior */
+ /* Barra superior */
+ .barra-superior {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1f609e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  
+  height: 60px;
+}
+
+/* Logo */
+.logo {
+  height: 40px;
+}
+
+/* Icono del menú */
+.menu-icon {
+  font-size: 44px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+/* --- Estilo de la sección de bienvenida --- */
+.bienvenida {
+  margin-top: 120px;
+  margin-left: 20px; /* Margen a la izquierda */
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+}
+
+/* --- Estilo del título --- */
+.bienvenida h1 {
+  
+  color: #F2B722;
+  width: 65%; /* Ocupa el 60% del ancho disponible */
+  font-size: 48px; /* Ajusta el tamaño si es necesario */
+}
+
+/* --- Estilo del párrafo --- */
+.bienvenida p {
+  width: 86%; /* Ocupa el 80% del ancho disponible */
+  font-size: 20px;
+  
+}
+
+/* --- Imagen Principal (Banner) --- */
+.imagen-principal {
+  
+  width: 95%;
+  height: 200px; /* Altura fija */
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden; /* Recorta cualquier parte que sobresalga */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-principal img {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta para que siempre encaje bien sin deformarse */
+  border-radius: 10px;
+  
+}
+/* --- Centrar la Sección "Temas" --- */
+.seccion-temas {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente si es necesario */
+  text-align: center;
+  margin-bottom: -20px; /* Espaciado superior e inferior */
+}
+
+/* --- Estilo del Título "Temas" --- */
+.seccion-temas h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* --- Línea Divisoria Debajo del Título --- */
+.linea-divisoria {
+  width: 90%;
+  height: 2px;
+  background: gray;
+  margin: 10px auto; /* Espaciado y centrado */
+}
+
+
+/* --- Sección de Texto Principal --- */
+.texto-superpuesto {
+  margin-left: 20px;
+  max-width: 80%;
+}
+
+.texto-superpuesto h1 {
+  font-size: 26px;
+  max-width: 50%;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.texto-superpuesto span {
+  font-size: 18px;
+  max-width: 80%;
+  display: block;
+  margin-left: 20px;
+}
+
+/* --- Sección "Temas" con Imagen de Fondo y Línea Divisoria --- */
+.tema {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  position: relative;
+  background: url('multimedia/temas-fondo.jpg') center/cover no-repeat;
+  color: white;
+}
+
+/* Línea divisoria */
+.tema::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 15px auto 0;
+}
+
+
+/* --- Banner --- */
+.fondo {
+  width: 90%;
+  height: 190px; /* Altura corregida */
+  background: url('multimedia/imagenes/am.jpg') center/cover no-repeat;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta la imagen sin distorsionarla */
+}
+/* --- Carrusel --- */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  gap: 8px; /* Reducido el espacio entre tarjetas */
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+}
+
+/* Ocultar scrollbar en móviles */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Tarjetas del Carrusel --- */
+.tarjeta {
+  flex: 0 0 auto;
+  width: 260px;
+  min-width: 260px;
+  height: 170px;
+  scroll-snap-align: start;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* --- Imágenes del Carrusel --- */
+.tarjeta img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* --- Texto dentro de cada Tarjeta --- */
+.tete {
+  text-align: left;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* --- Quitar Decoración de Enlaces --- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+header {
+ 
+  padding: 15px 0;
+  text-align: center;
+
+}
+/* Barra lateral */
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  background: #003366;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+/* Botón de cerrar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+  
+}
+
+/* Lista del menú */
+.sidebar ul {
+  list-style: none;
+  padding: 30px;
+  text-align: left;
+  margin-right: 30px;
+  
+
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.sidebar ul li img.icon {
+  width: 20px;
+  margin-right: 25px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  
+  padding-left: 10px;
+}
+
+/* Imagen en la parte inferior */
+.bottom-image {
+  width: 100%;
+  margin-top: 20px;
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  
+  opacity: 0.3; 
+}
+
+/* Mostrar barra lateral cuando está activa */
+.sidebar.active {
+  right: 0;
+}

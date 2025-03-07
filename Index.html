@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNAD-inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="multimedia/U.png">
+
+</head>
+<body>
+    <header class="barra-superior">
+        <img src="multimedia/UNAD.png" alt="Logo UNAD" class="logo">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <!-- Barra lateral -->
+    <div class="sidebar" id="sidebar">
+        <header>
+            <div class="header-container">
+                <img src="multimedia/UNAD.png" alt="Logo de la página" class="logo">
+            </div>
+        </header>
+        <div class="close-btn" onclick="toggleMenu()">✖</div>
+        <ul>
+            <li><img src="multimedia/inicio.svg" class="icon"> <a href="index.html">Inicio</a></li>
+            <li><img src="multimedia/noticia.svg" class="icon"> <a href="Noticia.html">Noticias</a></li>
+            <li>
+                <img src="multimedia/contacto.svg" class="icon">
+                <a href="https://api.whatsapp.com/send/?phone=5713759500&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                  Contacto
+                </a>
+              </li>
+            <li><img src="multimedia/frec.svg" class="icon"> <a href="preguntas.html">Preguntas Frecuentes</a></li>
+        </ul>
+        <img src="multimedia/imagenes/decoracion.png" alt="Decoración" class="bottom-image">
+    </div>
+
+    <main class="contenido">
+        <div class="bienvenida">
+            <h1 style="color: #F2B722;">Bienvenido a la UNAD</h1>
+            <p>Conoce los servicios de la UNAD y aprovecha al máximo tu experiencia universitaria.</p>
+        </div>
+
+        <!-- Imagen grande después del texto -->
+        <div class="imagen-principal">
+            <a href="encabezado.html">
+            <img src="multimedia/imagenes/banner.png" alt="Imagen destacada">
+        </a>
+        </div>
+
+        <!-- Separador con el título "Temas" -->
+        <div class="seccion-temas">
+            <h3>Temas</h3>
+        </div>
+        <div class="linea-divisoria"></div>
+        <!-- Carrusel de tarjetas -->
+        <div class="carousel">
+            <div class="tarjeta">
+                <a href="monitor.html">
+                    <img src="multimedia/imagenes/monitor.png" alt="Como ser monitor">
+                    <p>Como ser monitor</p>
+                </a>
+            </div>
+
+            <div class="tarjeta">
+                <a href="Noticia.html">
+                    <img src="multimedia/imagenes/NoticiasU.png" alt="Noticias">
+                    <p>Noticias</p>
+                </a>
+            </div>
+
+            <div class="tarjeta">
+                <a href="preguntas.html">
+                    <img src="multimedia/imagenes/OIP (1).jpg" alt="Preguntas frecuentes">
+                    <p>Preguntas frecuentes</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

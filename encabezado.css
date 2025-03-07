@@ -1,0 +1,255 @@
+/* Fuente y estilos generales */
+body {
+  font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Barra superior */
+.barra-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f609e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    z-index: 1000;
+    height: 60px;
+  }
+  .logo {
+    height: 40px;
+  }
+  
+  /* Icono del menú */
+  .menu-icon {
+    font-size: 44px;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+ /* Espacio para evitar que el contenido quede oculto por la barra */
+ .espacio-barra {
+    height: 70px;
+  }
+  
+  /* Contenedor principal */
+  .contenedor {
+    padding: 0 20px;
+    
+  }
+
+/* Imagen principal */
+.imagen-principal {
+  
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 100px auto 40px; /* Se agregó margen superior para separarla de la barra */
+    border-radius: 20px;
+    display: block;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 20px 0 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .info{
+    text-align: center;
+    font-size: 14px;
+    font-weight: medium;
+    margin-bottom: 20px;
+    margin-left: 20PX;
+    width: 350px;
+    word-wrap: break-word;
+   
+   
+   
+  }
+  h3{
+    margin-left: -20px;
+  }
+  .noticia {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    
+    box-shadow: 0px 10px 7px -4px rgba(0, 0, 0, 0.1); /* Sombra inferior */
+    border-radius: 8px; /* Bordes redondeados para mejor estética */
+    margin-bottom: 15px; /* Espacio entre noticias */
+    background: rgb(255, 255, 253);
+    
+}
+.noticia:hover {
+    transform: scale(1.02);
+  }
+  
+  .noticia:active {
+    transform: scale(1);
+    transition: transform 0.1s ease-in-out;
+  }
+
+
+
+
+.texto-lado {
+    flex: 1;
+    text-align: left;
+  margin-left: 10px;
+  margin-right: -100px;
+  padding: right 30px;
+  
+}
+.texto{
+   margin-left: -20px;
+    width: 210px;
+    word-wrap: break-word;
+    color: #414141;
+}
+.subtitulo{
+  color: #1f609e;
+}
+.imagen-lateral {
+    width: 130px;
+    height: 150px;
+    
+    border-radius: 5px;
+    margin-right: -10px;
+}
+.imag{
+  width: 155px;
+    height: 170px;
+    border-radius: 10px;
+    margin-right: -10px;
+    object-fit: cover; /* Recorta para que siempre encaje bien sin deformarse */
+}
+/* Barra inferior */
+.barra-inferior {
+    width: 100%;
+    height: 40px;
+    background-color: #1f609e;
+    margin-top: 50px; /* Espacio antes de la barra */
+    
+  }
+
+  .redes {
+    display: flex;
+    justify-content: center;
+    gap: 18px; /* Espacio entre los iconos */
+}
+
+.redes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes a img {
+    width: 30px; /* Ajusta el tamaño de los iconos según necesites */
+    height: auto;
+}
+
+.siguenos {
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    color: #1f609e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+  
+
+
+
+
+header {
+ 
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+/* Barra lateral */
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  background: #003366;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+/* Botón de cerrar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+  
+}
+
+/* Lista del menú */
+.sidebar ul {
+  list-style: none;
+  padding: 30px;
+  text-align: left;
+  margin-right: 30px;
+  
+
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.sidebar ul li img.icon {
+  width: 20px;
+  margin-right: 25px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+ 
+  padding-left: 10px;
+}
+
+/* Imagen en la parte inferior */
+.bottom-image {
+  width: 100%;
+  margin-top: 20px;
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  
+  opacity: 0.3; 
+}
+
+/* Mostrar barra lateral cuando está activa */
+.sidebar.active {
+  right: 0;
+}
