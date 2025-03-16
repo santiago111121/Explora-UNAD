@@ -245,11 +245,57 @@ header {
   position: absolute; 
   bottom: 0; 
   left: 0;
-  
+  z-index: -1;
   opacity: 0.3; 
 }
 
 /* Mostrar barra lateral cuando está activa */
 .sidebar.active {
   right: 0;
+}
+
+
+
+@media (min-width: 768px) { /* Para tablet y escritorio */
+  .contenedor {
+      
+      margin-left: 30%;
+      margin-right: 30%;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+ 
+  text-align: center; /* Asegura que el texto esté alineado en el centro */
+  max-width: 80%; /* Controla el ancho */
+  margin: 10vh auto; /* Centrado vertical y horizontal */
+  padding: 40px; /* Espaciado interno */
+  background: white; /* Fondo del cuadro */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center; /* Centrar contenido */
+  }
+  .info{
+    text-align: center;
+    margin-left: 33%;
+  }
+  .texto{
+    width: 80%;
+   margin-left: 50px;
+  }
+  .imag{
+    width: 20%;
+  }
+  
+  .subtitulo{
+    margin-left: 50px;
+    margin-bottom: 40px;
+  }
+  .imagen-principal{
+    width: 60%;
+    height: 300px;
+    margin-top: -10px;
+  }
+  .siguenos{
+    position: relative;
+    left: 0;  /* Vuelve al contenedor en escritorio */
+  }
 }

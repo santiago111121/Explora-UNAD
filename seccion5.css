@@ -1,0 +1,236 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Barra superior */
+.barra-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f609e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    height: 60px;
+    z-index: 1000;
+}
+
+.logo {
+    height: 40px;
+}
+
+.menu-icon {
+    font-size: 44px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+header {
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background: #003366;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1100;
+}
+
+/* Botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+}
+
+/* Lista del menú */
+.sidebar ul {
+    list-style: none;
+    padding: 30px;
+    text-align: left;
+    margin-right: 30px;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.sidebar ul li img.icon {
+    width: 20px;
+    margin-right: 25px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    padding-left: 10px;
+}
+
+/* Imagen en la parte inferior */
+.bottom-image {
+    width: 100%;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Mostrar barra lateral cuando está activa */
+.sidebar.active {
+    right: 0;
+}
+
+/* Estilos para la estructura de contenido */
+.contenido {
+    max-width: 800px;
+    margin: 120px auto 50px;
+    padding: 20px;
+}
+
+.info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pasos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.texto {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    max-width: 400px;
+}
+
+.imagen {
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+   
+}
+
+.imagen img {
+    width: 100%;
+    border-radius: 10px;
+    height: 400px;
+    width: 340px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+/* Contenedor de redes sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .red {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-weight: bold;
+  }
+  /* Iconos de redes sociales */
+  .redes-sociales img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Texto "Síguenos en" */
+  .sigueme-texto {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  /* Espaciado adicional al final */
+  .barra-inferior {
+    width: 100%;
+    height: 40px;
+    background-color: #1f609e;
+    margin-top: 50px; /* Espacio antes de la barra */
+  }
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    .pasos {
+        display: flex;
+        flex-direction: column; /* Los elementos estarán en columna */
+        justify-content: center; /* Centramos el contenido horizontalmente */
+        align-items: center; /* Centramos los elementos verticalmente */
+        gap: 20px; /* Espaciado entre los elementos */
+    }
+
+    /* Para el texto */
+    .texto {
+        text-align: center; /* Centrado de texto */
+        max-width: 90%; /* El texto no se saldrá de la pantalla */
+        padding: 15px;
+        display: block;
+    }
+
+    /* Para la imagen */
+    .imagen {
+        max-width: 90%; /* Imagen no ocupará más del 90% del contenedor */
+        display: block;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .imagen img {
+        width: 100%; /* La imagen se adapta al 100% de su contenedor */
+        border-radius: 10px;
+        
+    }
+
+    /* Centramos la sección de información */
+    .info {
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Aquí ajustamos la intercalación para que cada imagen y texto se balanceen */
+    .pasos:nth-child(odd) {
+        flex-direction: row-reverse; /* Imágenes y texto intercalados */
+    }
+    .ima{ display: none;}
+}
+
+
+

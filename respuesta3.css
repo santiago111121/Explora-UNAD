@@ -281,11 +281,56 @@ header {
   position: absolute; 
   bottom: 0; 
   left: 0;
-  
+  z-index: -1;
   opacity: 0.3; 
 }
   
   /* Mostrar barra lateral cuando está activa */
   .sidebar.active {
     right: 0;
+  }
+
+
+
+
+
+
+  @media (min-width: 768px) { /* Para tablet y escritorio */
+    .to{
+      max-width: 80%; /* Controla el ancho */
+      margin: 10vh auto; /* Centrado vertical y horizontal */
+      padding: 40px; /* Espaciado interno */
+      background: white; /* Fondo del cuadro */
+      border-radius: 20px; /* Bordes redondeados */
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Sombra */
+      text-align: center; /* Centrar contenido */
+      margin-bottom: 100px;
+
+    }
+    .vv{ 
+      margin-top: 20px;
+      width: 90%;
+    }
+    .imagen-principal{
+      
+      width: 50%;
+      margin-top: -100px;
+      
+      
+      
+    }
+    .interes h2, ul {
+      margin-top: 50px;
+      width: 400px;
+      margin-left: 17%;
+    }
+    .ultimo{
+      width: 55%;
+     
+      margin-left: 23%;
+    }
+    .contenido{
+      width: 75%;
+      margin-left: 18%;
+    }
   }

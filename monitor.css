@@ -6,7 +6,10 @@ body {
     background: #fff;
     color: #000;
     text-align: left;
+    
+    
 }
+
 
  /* Barra superior */
  .barra-superior {
@@ -226,7 +229,7 @@ header {
   position: absolute; 
   bottom: 0; 
   left: 0;
-  
+  z-index: -1;
   opacity: 0.3; 
 }
   
@@ -234,3 +237,58 @@ header {
   .sidebar.active {
     right: 0;
   }
+
+
+
+
+  @media (min-width: 768px) { /* Para tablet y escritorio */
+    .to{
+      max-width: 80%; /* Controla el ancho */
+      margin: 10vh auto; /* Centrado vertical y horizontal */
+      padding: 40px; /* Espaciado interno */
+      background: white; /* Fondo del cuadro */
+      border-radius: 20px; /* Bordes redondeados */
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Sombra */
+      text-align: center; /* Centrar contenido */
+      margin-bottom: 100px;
+
+    }
+  .imagen-inicial{
+    width: 50%;
+    margin-top: 10px;
+  }
+.contenido{
+  margin-top: 20px;
+      width: 90%;
+}
+.ini{
+  margin-left: 0;
+  text-align: center;
+  display: block;
+  
+}
+.seccion{
+  width: 75%;
+  margin-left: 18%;
+}
+.ben{
+  margin-left: 30%;
+  text-align: center;
+  display: block;
+  margin-bottom: 70px;
+}
+.fina{
+  margin-top: 100px;
+  margin-left: 0;
+  text-align: left;
+  display: block;
+}
+.video{
+  margin-top: 100px;
+  text-align: center;
+  display: block;
+  margin-left: 30%;
+}
+  }
+
+  

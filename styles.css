@@ -1,18 +1,16 @@
 /* --- Estilos Generales --- */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('multimedia/imagenes/EDF.png'); /* Ruta de la imagen */
+
   background-size: cover; /* Ajusta la imagen sin deformarla */
   background-position: center; /* Centra la imagen */
 }
 
 /* --- Barra Superior con Logo e Icono de Opciones --- */
-/* Barra superior */
- /* Barra superior */
- /* Barra superior */
- .barra-superior {
+
+.barra-superior {
   position: fixed;
   top: 0;
   left: 0;
@@ -23,7 +21,7 @@ body {
   align-items: center;
   padding: 10px 20px;
   color: white;
-  
+  z-index: 4;
   height: 60px;
 }
 
@@ -47,8 +45,7 @@ body {
 
 /* --- Estilo del título --- */
 .bienvenida h1 {
-  
-  color: #F2B722;
+  color: #f2b722;
   width: 65%; /* Ocupa el 60% del ancho disponible */
   font-size: 48px; /* Ajusta el tamaño si es necesario */
 }
@@ -57,31 +54,140 @@ body {
 .bienvenida p {
   width: 86%; /* Ocupa el 80% del ancho disponible */
   font-size: 20px;
-  
 }
 
-/* --- Imagen Principal (Banner) --- */
+/* --- Contenedor de la imagen --- */
 .imagen-principal {
-  
   width: 95%;
-  height: 200px; /* Altura fija */
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden; /* Recorta cualquier parte que sobresalga */
-  display: flex;
+  max-width: 90%;
+  height: 250px;
+  margin: 20px auto; /* Centrado */
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.1);
+  z-index: 3;
 }
 
+
+@media (min-width: 768px) {
+  /* Contenedor principal (Bienvenida + Banner) */
+  .io {
+    width: 80%;
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Separa bienvenida y banner */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+
+  /* Bienvenida a la izquierda */
+  .bienvenida {
+    margin-left: 5%;
+    margin-top: 12%;
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+  }
+  .seccion-temas{
+padding: 3%;
+
+  }
+  /* Imagen del banner completamente a la derecha */
+  .imagen-principal {
+    margin-right: 5%;
+    margin-top: 17%;
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: right; /* Alinea la imagen a la derecha */
+  }
+
+  .imagen-principal img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Sección de temas y línea divisoria */
+  .seccion-temas {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .linea-divisoria {
+    width: 80%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px auto;
+  }
+
+  /* Carrusel de tarjetas centrado */
+  .carousel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Ajuste de tarjetas */
+  .tarjeta {
+    flex: 1;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .tarjeta img {
+    width: 100%;
+    height: auto;
+  }
+  .info-container {
+    margin-left: 23%;
+ width: 50%;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .info-item {
+    padding: 40px;
+    margin-top: 30px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+/* --- Imagen con sombra y bordes redondeados --- */
 .imagen-principal img {
-  margin-top: 50px;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Recorta para que siempre encaje bien sin deformarse */
-  border-radius: 10px;
-  
+  object-fit: cover;
+  border-radius: 20px;
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3));
 }
+
+/* --- Efecto de hover y clic en la imagen --- */
+.imagen-principal:hover img {
+  transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+  filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.4));
+}
+
+.imagen-principal:active img {
+  transform: scale(0.98); /* Ligera reducción al hacer clic */
+}
+
 /* --- Centrar la Sección "Temas" --- */
 .seccion-temas {
   display: flex;
@@ -104,7 +210,6 @@ body {
   background: gray;
   margin: 10px auto; /* Espaciado y centrado */
 }
-
 
 /* --- Sección de Texto Principal --- */
 .texto-superpuesto {
@@ -134,7 +239,7 @@ body {
   font-weight: bold;
   padding: 20px;
   position: relative;
-  background: url('multimedia/temas-fondo.jpg') center/cover no-repeat;
+  background: url("multimedia/temas-fondo.jpg") center/cover no-repeat;
   color: white;
 }
 
@@ -148,12 +253,11 @@ body {
   margin: 15px auto 0;
 }
 
-
 /* --- Banner --- */
 .fondo {
   width: 90%;
   height: 190px; /* Altura corregida */
-  background: url('multimedia/imagenes/am.jpg') center/cover no-repeat;
+  background: url("multimedia/imagenes/am.jpg") center/cover no-repeat;
   margin: 20px auto;
   border-radius: 10px;
   overflow: hidden;
@@ -219,12 +323,9 @@ a {
   color: inherit;
 }
 
-
 header {
- 
   padding: 15px 0;
   text-align: center;
-
 }
 /* Barra lateral */
 .sidebar {
@@ -236,6 +337,7 @@ header {
   background: #003366;
   transition: 0.3s;
   padding-top: 60px;
+  z-index: 5;
 }
 
 /* Botón de cerrar */
@@ -246,7 +348,6 @@ header {
   cursor: pointer;
   font-size: 25px;
   color: white;
-  
 }
 
 /* Lista del menú */
@@ -255,8 +356,6 @@ header {
   padding: 30px;
   text-align: left;
   margin-right: 30px;
-  
-
 }
 
 .sidebar ul li {
@@ -277,7 +376,6 @@ header {
 }
 
 .sidebar ul li a:hover {
-  
   padding-left: 10px;
 }
 
@@ -285,14 +383,74 @@ header {
 .bottom-image {
   width: 100%;
   margin-top: 20px;
-  position: absolute; 
-  bottom: 0; 
+  position: absolute;
+  bottom: 0;
   left: 0;
-  
-  opacity: 0.3; 
+  z-index: -1;
+  opacity: 0.3;
 }
 
 /* Mostrar barra lateral cuando está activa */
 .sidebar.active {
   right: 0;
+}
+
+.info-container {
+ 
+  margin-top: 80px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.info-item {
+  margin-top: 30px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-item img {
+  width: 50px; /* Ajusta el tamaño según necesites */
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Contenedor de redes sociales */
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.red {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-weight: bold;
+}
+/* Iconos de redes sociales */
+.redes-sociales img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Texto "Síguenos en" */
+.sigueme-texto {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* Espaciado adicional al final */
+.barra-inferior {
+  width: 100%;
+  height: 40px;
+  background-color: #1f609e;
+  margin-top: 50px; /* Espacio antes de la barra */
 }
