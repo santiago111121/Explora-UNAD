@@ -198,9 +198,11 @@ header {
 
     /* Para el texto */
     .texto {
-        text-align: center; /* Centrado de texto */
+        
+        margin-left: -10px;
+        text-align: left; /* Centrado de texto */
         max-width: 90%; /* El texto no se saldrá de la pantalla */
-        padding: 15px;
+        padding:20px;
         display: block;
     }
 
@@ -208,6 +210,7 @@ header {
     .imagen {
         max-width: 90%; /* Imagen no ocupará más del 90% del contenedor */
         display: block;
+        
         justify-content: center;
         align-items: center;
         
@@ -216,7 +219,7 @@ header {
     .imagen img {
         width: 100%; /* La imagen se adapta al 100% de su contenedor */
         border-radius: 10px;
-        
+        height: 200px;
     }
 
     /* Centramos la sección de información */
