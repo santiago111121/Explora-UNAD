@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNAD preguntas</title>
+    <title>UNAD Noticias</title>
     <link rel="stylesheet" href="encabezado.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
@@ -13,10 +13,11 @@
 
     <!-- Barra Superior -->
     <header class="barra-superior">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <a href="index.html">
         <img src="multimedia/UNAD.png" alt="Logo UNAD" class="logo" style="width: 80px; height: 40px;">
     </a>
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    
         
     <!-- Barra lateral -->
 <div class="sidebar" id="sidebar">
@@ -38,6 +39,14 @@
         </a>
       </li>
        <li><img src="multimedia/frec.svg" class="icon"> <a href="preguntas.html">Preguntas Frecuentes</a></li>
+       <li class="modo-item">
+          
+        <span class="modo-text">Modo nocturno</span>
+        <label class="switch">
+          <input type="checkbox" id="modoToggle" onclick="toggleModoOscuro()" />
+          <span class="slider"></span>
+        </label>
+      </li>
    </ul>
    <img src="multimedia/imagenes/decoracion.png" alt="Decoración" class="bottom-image">
 </div>

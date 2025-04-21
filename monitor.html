@@ -13,10 +13,11 @@
   </head>
   <body>
     <header class="barra-superior">
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
       <a href="index.html">
         <img src="multimedia/UNAD.png" alt="Logo UNAD" class="logo" />
       </a>
-      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      
 
       <!-- Barra lateral -->
       <div class="sidebar" id="sidebar">
@@ -52,6 +53,14 @@
             <img src="multimedia/frec.svg" class="icon" />
             <a href="preguntas.html">Preguntas Frecuentes</a>
           </li>
+          <li class="modo-item">
+          
+            <span class="modo-text">Modo nocturno</span>
+            <label class="switch">
+              <input type="checkbox" id="modoToggle" onclick="toggleModoOscuro()" />
+              <span class="slider"></span>
+            </label>
+          </li>
         </ul>
         <img src="decoracion.png" alt="Decoración" class="bottom-image" />
       </div>
@@ -70,13 +79,15 @@
             <h1>¿Cómo ser monitor en la UNAD?</h1>
             <p>
               Ser monitor en la UNAD es una oportunidad para fortalecer tus
-              habilidades académicas...
+              habilidades académicas.
             </p>
           </div>
           <div class="seccion">
             <img src="multimedia/imagenes/grupo.jpg" alt="Imagen 1" />
             <div class="texto">
-              <h2>Revisa la convocatoria oficial</h2>
+              <h2><br>
+                <br>
+                Revisa la convocatoria oficial</h2>
               <p>
                 Accede al portal institucional de la UNAD y dirígete a la
                 sección de Bienestar Universitario o a la facultad
@@ -90,7 +101,8 @@
           <div class="seccion">
             <img src="multimedia/imagenes/am.jpg" alt="Imagen 2" />
             <div class="texto">
-              <h2>Diligencia tu postulación</h2>
+              <h2><br>
+                <br>Diligencia tu postulación</h2>
               <p>
                 Una vez que elijas la monitoría que te interesa, completa el
                 formulario de inscripción con tus datos personales y adjunta los
@@ -104,7 +116,9 @@
           <div class="seccion">
             <img src="multimedia/imagenes/UNAD.png" alt="Imagen 3" />
             <div class="texto">
-              <h2>Cumple con el proceso de selección</h2>
+              <h2><br>
+                <br>
+                Cumple con el proceso de selección</h2>
               <p>
                 Dependiendo del tipo de monitoría, podrías necesitar presentar
                 una entrevista, realizar una prueba de conocimientos o completar
@@ -125,21 +139,21 @@
             </div>
             <h3>Académicos</h3>
             <p>
-              --Los monitores que cumplen con una dedicación de 40 horas
+              Los monitores que cumplen con una dedicación de 40 horas
               semanales pueden beneficiarse con la cobertura del 100% de la
               matrícula en dos periodos académicos.
             </p>
 
             <h3>Económicos</h3>
             <p>
-              - -Los monitores reciben un incentivo equivalente al 75% del
+              Los monitores reciben un incentivo equivalente al 75% del
               Salario Mínimo Mensual Legal Vigente (SMMLV) por cada mes de
               monitoria.
             </p>
 
             <h3>Cualificación</h3>
             <p>
-              - -La UNAD ofrece a sus monitores un diplomado gratuito en
+              La UNAD ofrece a sus monitores un diplomado gratuito en
               "Estrategias pedagógicas y herramientas didácticas en ambientes
               virtuales de aprendizaje".
             </p>

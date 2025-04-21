@@ -13,8 +13,9 @@
   </head>
   <body>
     <header class="barra-superior">
-      <img src="multimedia/UNAD.png" alt="Logo UNAD" class="logo" />
       <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <img src="multimedia/UNAD.png" alt="Logo UNAD" class="logo" />
+      
     </header>
 
     <!-- Barra lateral -->
@@ -50,6 +51,16 @@
           <img src="multimedia/frec.svg" class="icon" />
           <a href="preguntas.html">Preguntas Frecuentes</a>
         </li>
+        <li class="modo-item">
+          
+          <span class="modo-text">Modo nocturno</span>
+          <label class="switch">
+            <input type="checkbox" id="modoToggle" onclick="toggleModoOscuro()" />
+            <span class="slider"></span>
+          </label>
+        </li>
+        
+        
       </ul>
       <img
         src="multimedia/imagenes/decoracion.png"

@@ -18,10 +18,11 @@
   <body>
     <!-- Encabezado -->
     <header class="barra-superior">
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
       <a href="index.html">
         <img src="multimedia/UNAD.png" alt="Logo UNAD" class="logo" />
       </a>
-      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      
 
       <!-- Barra lateral -->
       <div class="sidebar" id="sidebar">
@@ -62,6 +63,14 @@
           <li>
             <img src="multimedia/frec.svg" class="icon" />
             <a href="preguntas.html">Preguntas <br />Frecuentes</a>
+          </li>
+          <li class="modo-item">
+          
+            <span class="modo-text">Modo nocturno</span>
+            <label class="switch">
+              <input type="checkbox" id="modoToggle" onclick="toggleModoOscuro()" />
+              <span class="slider"></span>
+            </label>
           </li>
         </ul>
         <img
@@ -123,6 +132,24 @@
               asistencia en línea.
             </p>
           </section>
+          <main class="video">
+            <h2 class="guia-completa">Guía completa</h2>
+            <p class="guiaa">
+              Este proceso se complementa con el siguiente video, donde se
+              explican más detalles.
+            </p>
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/oWq4Ruv1TSM?si=g_hoAxM0wLt8-70E"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </main>
         </section>
       </main>
       <section class="interes">
@@ -140,11 +167,12 @@
             >
           </li>
         </ul>
+       
       </section>
-
+      
       <!-- Footer -->
       <footer>
-        <p class="siguenos">síguenos en:</p>
+        <p class="siguenos">Síguenos en:</p>
         <div class="redes">
           <a
             href="https://www.instagram.com/universidadunad/"

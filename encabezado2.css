@@ -10,7 +10,82 @@ body {
   background-color: #fff;
   text-align: center;
 }
+/* Switch más bonito */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.4s ease;
+  border-radius: 34px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Modo oscuro general */
+body.modo-oscuro {
+  background-color: #111111;
+  color: #fff;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Fondos blancos se vuelven gris oscuro en tarjetas */
+body.modo-oscuro .tarjeta  {
+  background-color: #000000 !important;
+  color: white !important;
+}
+body.modo-oscuro p{
+  color: #fff;
+}
+body.modo-oscuro .to{
+  background-color: #1d1d1d;
+}
+/* Texto del switch */
+.modo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  padding: 15px 0;
+}
+
+.modo-text {
+  font-size: 14px;
+}
 /* Barra superior */
 .barra-superior {
   position: fixed;
@@ -27,7 +102,11 @@ body {
 }
 
 .logo {
-  height: 40px;
+  position: absolute;
+    left: 48.5%;
+    transform: translateX(-50%);
+    height: 40px;
+    margin-top: -20px;
 }
 
 .menu-icon {
@@ -243,7 +322,7 @@ header {
     height: 100%;
     position: fixed;
     top: 0;
-    right: -250px;
+    left: -250px;
     background: #003366;
     transition: 0.3s;
     padding-top: 60px;
@@ -305,7 +384,7 @@ header {
   
   /* Mostrar barra lateral cuando está activa */
   .sidebar.active {
-    right: 0;
+    left: 0;
   }
 
 
@@ -326,6 +405,12 @@ header {
   place-items: center; /* Centra el contenido en ambas direcciones */
   height: 100vh;   
  
+    }
+    .menu-icon{
+      margin-left: 6%;
+    }
+    .logo{
+      margin-left: 2%;
     }
     .image-container{
       margin-top: -190px;

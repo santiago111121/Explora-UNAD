@@ -9,7 +9,79 @@ body {
     
     
 }
+/* Switch más bonito */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.4s ease;
+  border-radius: 34px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Modo oscuro general */
+body.modo-oscuro {
+  background-color: #111111;
+  color: #fff;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Fondos blancos se vuelven gris oscuro en tarjetas */
+body.modo-oscuro .tarjeta  {
+  background-color: #000000 !important;
+  color: white !important;
+}
+body.modo-oscuro .to{
+  background-color: #1d1d1d;
+}
+/* Texto del switch */
+.modo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  padding: 15px 0;
+}
+
+.modo-text {
+  font-size: 14px;
+}
 
  /* Barra superior */
  .barra-superior {
@@ -29,7 +101,11 @@ body {
   
   /* Logo */
   .logo {
+    position: absolute;
+    left: 44%;
+    transform: translateX(-50%);
     height: 40px;
+    margin-top: -20px;
   }
   
   /* Icono del menú */
@@ -57,6 +133,7 @@ p {
 
 /* Imagen inicial */
 .imagen-inicial {
+  
     width: 90%;
     height: 190px;
     background-color: red;
@@ -142,6 +219,7 @@ footer {
     margin-bottom: 50px;
 }
 .video-container {
+  
     position: relative;
     width: 100%; /* Ajusta el ancho al contenedor padre */
     max-width: 800px; /* Define un ancho máximo */
@@ -149,6 +227,7 @@ footer {
 }
 
 .video-container iframe {
+  border-radius: 20px;
     width: 100%;
     height: 100%;
     display: block;
@@ -173,7 +252,8 @@ header {
     height: 100%;
     position: fixed;
     top: 0;
-    right: -250px;
+    left: -250px;
+ 
     background: #003366;
     transition: 0.3s;
     padding-top: 60px;
@@ -235,7 +315,7 @@ header {
   
   /* Mostrar barra lateral cuando está activa */
   .sidebar.active {
-    right: 0;
+    left: 0;
   }
 
 
@@ -253,16 +333,24 @@ header {
       margin-bottom: 100px;
 
     }
+    .menu-icon{
+      margin-left: 6%;
+    }
+    .logo{
+      margin-left: 4%;
+    }
   .imagen-inicial{
     width: 50%;
+    margin-left:243px;
     margin-top: 10px;
   }
 .contenido{
   margin-top: 20px;
       width: 90%;
+      
 }
 .ini{
-  margin-left: 0;
+  margin-left: 100px;
   text-align: center;
   display: block;
   
@@ -270,9 +358,10 @@ header {
 .seccion{
   width: 75%;
   margin-left: 18%;
+  margin-left: 140px;
 }
 .ben{
-  margin-left: 30%;
+  margin-left: 32%;
   text-align: center;
   display: block;
   margin-bottom: 70px;

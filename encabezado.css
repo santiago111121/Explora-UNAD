@@ -5,7 +5,84 @@ body {
     padding: 0;
     background-color: white;
 }
+/* Switch más bonito */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.4s ease;
+  border-radius: 34px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Modo oscuro general */
+body.modo-oscuro {
+  background-color: #1d1d1d;
+  color: #fff;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Fondos blancos se vuelven gris oscuro en tarjetas */
+body.modo-oscuro .contenedor{
+  background-color: black;
+}
+body.modo-oscuro .noticia{
+  background-color: #1d1d1d;
+}
+body.modo-oscuro p{
+  color: #fff;
+}
+body.modo-oscuro .to{
+  background-color: #1d1d1d;
+}
+/* Texto del switch */
+.modo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  padding: 15px 0;
+}
+
+.modo-text {
+  font-size: 14px;
+}
 /* Barra superior */
 .barra-superior {
     position: fixed;
@@ -22,7 +99,11 @@ body {
     height: 60px;
   }
   .logo {
+    position: absolute;
+    left: 44%;
+    transform: translateX(-50%);
     height: 40px;
+    margin-top: -20px;
   }
   
   /* Icono del menú */
@@ -36,11 +117,7 @@ body {
     height: 70px;
   }
   
-  /* Contenedor principal */
-  .contenedor {
-    padding: 0 20px;
-    
-  }
+  
 
 /* Imagen principal */
 .imagen-principal {
@@ -53,6 +130,7 @@ body {
     margin: 100px auto 40px; /* Se agregó margen superior para separarla de la barra */
     border-radius: 20px;
     display: block;
+    margin-bottom: 100px;
   }
   h2 {
     font-size: 22px;
@@ -64,7 +142,8 @@ body {
     text-align: center;
     font-size: 14px;
     font-weight: medium;
-    margin-bottom: 20px;
+    
+    margin-bottom: 70px;
     margin-left: 20PX;
     width: 350px;
     word-wrap: break-word;
@@ -80,7 +159,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
+    
     cursor: pointer;
     transition: background 0.2s, box-shadow 0.2s;
     
@@ -121,14 +201,14 @@ body {
 }
 .imagen-lateral {
     width: 130px;
-    height: 150px;
+    height: 170px;
     
     border-radius: 5px;
     margin-right: -10px;
 }
 .imag{
-  width: 155px;
-    height: 170px;
+  width: 105px;
+    height: 150px;
     border-radius: 10px;
     margin-right: -10px;
     object-fit: cover; /* Recorta para que siempre encaje bien sin deformarse */
@@ -189,7 +269,7 @@ header {
   height: 100%;
   position: fixed;
   top: 0;
-  right: -250px;
+  left:  -250px;
   background: #003366;
   transition: 0.3s;
   padding-top: 60px;
@@ -251,7 +331,7 @@ header {
 
 /* Mostrar barra lateral cuando está activa */
 .sidebar.active {
-  right: 0;
+  left: 0;
 }
 
 
@@ -277,6 +357,13 @@ header {
     text-align: center;
     margin-left: 33%;
   }
+  .logo{
+    margin-left: 4%;
+  }
+  .menu-icon{
+    margin-left: 6%;
+  }
+ 
   .texto{
     width: 80%;
    margin-left: 50px;
@@ -284,7 +371,10 @@ header {
   .imag{
     width: 20%;
   }
-  
+  .noticia{
+    margin-left: 190px;
+    max-width: 60%;
+  }
   .subtitulo{
     margin-left: 50px;
     margin-bottom: 40px;
@@ -293,6 +383,12 @@ header {
     width: 60%;
     height: 300px;
     margin-top: -10px;
+  }
+  /* Contenedor principal */
+  .contenedor {
+    padding:  30px;
+
+    
   }
   .siguenos{
     position: relative;

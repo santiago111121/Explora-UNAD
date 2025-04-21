@@ -13,10 +13,11 @@
 
      <!-- Encabezado -->
      <header class="barra-superior">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <a href="index.html">
             <img src="multimedia/UNAD.png" alt="Logo UNAD" class="logo">
         </a>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+       
         
         <!-- Barra lateral -->  
     <div class="sidebar" id="sidebar">
@@ -38,7 +39,15 @@
             </a>
           </li>
            <li><img src="multimedia/frec.svg" class="icon"> <a href="preguntas.html">Preguntas Frecuentes</a></li>
-       </ul>
+           <li class="modo-item">
+          
+            <span class="modo-text">Modo nocturno</span>
+            <label class="switch">
+              <input type="checkbox" id="modoToggle" onclick="toggleModoOscuro()" />
+              <span class="slider"></span>
+            </label>
+          </li>
+        </ul>
        <img src="multimedia/imagenes/decoracion.png" alt="Decoración" class="bottom-image">
     </div>
     
@@ -86,7 +95,7 @@
     </main>
     <div class="divider"></div> <!-- Línea divisoria -->
     <main class="abajo">
-<h4 class="tito">tambien te puede interesar:</h4>
+<h4 class="tito">Tambien te puede interesar:</h4>
     <div class="image-container">
         <a href="encabezado4.html">
             <img src="multimedia/imagenes/banners/oportunidades.png" alt="Imagen 1" class="hover-image">
@@ -102,7 +111,7 @@
     
     <!-- Footer -->
     <footer>
-        <p class="siguenos">síguenos en:</p>
+        <p class="siguenos">Síguenos en:</p>
         <div class="redes">
             <a href="https://www.instagram.com/universidadunad/" class="btn-red social-ig" target="_blank">
                 <img src="multimedia/insta.svg" alt="Instagram">

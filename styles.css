@@ -7,6 +7,77 @@ body {
   background-size: cover; /* Ajusta la imagen sin deformarla */
   background-position: center; /* Centra la imagen */
 }
+/* Switch más bonito */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.4s ease;
+  border-radius: 34px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Modo oscuro general */
+body.modo-oscuro {
+  background-color: #1d1d1d;
+  color: #fff;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Fondos blancos se vuelven gris oscuro en tarjetas */
+body.modo-oscuro .tarjeta  {
+  background-color: #333 !important;
+  color: white !important;
+}
+
+/* Texto del switch */
+.modo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  padding: 15px 0;
+}
+
+.modo-text {
+  font-size: 14px;
+}
 
 /* --- Barra Superior con Logo e Icono de Opciones --- */
 
@@ -20,13 +91,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  color: white;
+  color: #fff;
   z-index: 4;
   height: 60px;
 }
 
 /* Logo */
 .logo {
+  position: absolute;
+  left: 44%;
+  transform: translateX(-50%);
   height: 40px;
 }
 
@@ -34,7 +108,7 @@ body {
 .menu-icon {
   font-size: 44px;
   cursor: pointer;
-  margin-right: 40px;
+  
 }
 /* --- Estilo de la sección de bienvenida --- */
 .bienvenida {
@@ -95,6 +169,15 @@ body {
   .seccion-temas{
 padding: 3%;
 
+  }
+  .logo{
+    margin-left: 4%;
+  }
+  .seccion-temas h3{
+    margin-left: -13px;
+  }
+  .menu-icon{
+    margin-left: 6%;
   }
   /* Imagen del banner completamente a la derecha */
   .imagen-principal {
@@ -201,6 +284,7 @@ padding: 3%;
 .seccion-temas h3 {
   font-size: 24px;
   font-weight: bold;
+  
 }
 
 /* --- Línea Divisoria Debajo del Título --- */
@@ -333,13 +417,17 @@ header {
   height: 100%;
   position: fixed;
   top: 0;
-  right: -250px;
+   left: -250px;
+ 
   background: #003366;
   transition: 0.3s;
   padding-top: 60px;
   z-index: 5;
 }
-
+/* Mostrar barra lateral cuando está activa */
+.sidebar.active {
+  left: 0;
+ }
 /* Botón de cerrar */
 .close-btn {
   position: absolute;
@@ -390,10 +478,7 @@ header {
   opacity: 0.3;
 }
 
-/* Mostrar barra lateral cuando está activa */
-.sidebar.active {
-  right: 0;
-}
+
 
 .info-container {
  

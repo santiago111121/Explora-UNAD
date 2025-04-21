@@ -13,10 +13,11 @@
 
      <!-- Encabezado -->
      <header class="barra-superior">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <a href="Index.html">
             <img src="multimedia/UNAD.png" alt="Logo UNAD" class="logo">
         </a>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        
         
         <!-- Barra lateral -->  
     <div class="sidebar" id="sidebar">
@@ -38,7 +39,15 @@
             </a>
           </li>
            <li><img src="multimedia/frec.svg" class="icon"> <a href="preguntas.html">Preguntas Frecuentes</a></li>
-       </ul>
+           <li class="modo-item">
+          
+            <span class="modo-text">Modo nocturno</span>
+            <label class="switch">
+              <input type="checkbox" id="modoToggle" onclick="toggleModoOscuro()" />
+              <span class="slider"></span>
+            </label>
+          </li>
+        </ul>
        <img src="multimedia/imagenes/decoracion.png" alt="Decoración" class="bottom-image">
     </div>
     

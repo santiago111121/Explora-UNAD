@@ -13,10 +13,11 @@
 
      <!-- Encabezado -->
      <header class="barra-superior">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <a href="index.html">
             <img src="multimedia/UNAD.png" alt="Logo UNAD" class="logo">
         </a>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+       
         
         <!-- Barra lateral -->  
     <div class="sidebar" id="sidebar">
@@ -38,7 +39,15 @@
             </a>
           </li>
            <li><img src="multimedia/frec.svg" class="icon"> <a href="preguntas.html">Preguntas Frecuentes</a></li>
-       </ul>
+           <li class="modo-item">
+          
+            <span class="modo-text">Modo nocturno</span>
+            <label class="switch">
+              <input type="checkbox" id="modoToggle" onclick="toggleModoOscuro()" />
+              <span class="slider"></span>
+            </label>
+          </li>
+        </ul>
        <img src="multimedia/imagenes/decoracion.png" alt="Decoración" class="bottom-image">
     </div>
     
@@ -51,7 +60,7 @@
         <div class="imagen-principal" style="background-image: url('multimedia/imagenes/mente.jpg');"></div>
         <!-- Sección de información -->
         <section class="contenido">
-            <h2>la Semana del Cerebro<br> Colombia 2025</h2>
+            <h2>La Semana del Cerebro<br> Colombia 2025</h2>
             <p class="texto">
                 Del 10 al 16 de marzo, la Semana del Cerebro Colombia 2025 acercará la neurociencia a la comunidad académica y al público en general. La Escuela de Ciencias Sociales, Artes y Humanidades (ECSAH) de la UNAD, se suma a esta iniciativa con dos eventos que exploran el estudio del cerebro y la neurotecnología.
             </p>
@@ -81,7 +90,7 @@
     
     <main class="abajo">
         <div class="divider"></div> <!-- Línea divisoria -->
-<h4 class="tito">tambien te puede interesar:</h4>
+<h4 class="tito">Tambien te puede interesar:</h4>
     <div class="image-container">
         
         <a href="encabezado2.html">
@@ -99,7 +108,7 @@
 
     <!-- Footer -->
     <footer>
-        <p class="siguenos">síguenos en:</p>
+        <p class="siguenos">Síguenos en:</p>
         <div class="redes">
             <a href="https://www.instagram.com/universidadunad/" class="btn-red social-ig" target="_blank">
                 <img src="multimedia/insta.svg" alt="Instagram">
