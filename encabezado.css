@@ -39,7 +39,7 @@ body {
   left: 3px;
   bottom: 3px;
   background-color: white;
-  transition: transform 0.4s ease;
+ 
   border-radius: 50%;
 }
 
@@ -55,7 +55,7 @@ input:checked + .slider:before {
 body.modo-oscuro {
   background-color: #1d1d1d;
   color: #fff;
-  transition: background-color 0.4s ease, color 0.4s ease;
+ ;
 }
 
 /* Fondos blancos se vuelven gris oscuro en tarjetas */
@@ -79,7 +79,12 @@ body.modo-oscuro .to{
   color: white;
   padding: 15px 0;
 }
-
+html.modo-oscuro,
+body.modo-oscuro {
+  background-color: #111;
+  color: #fff;
+  
+}
 .modo-text {
   font-size: 14px;
 }
@@ -134,23 +139,25 @@ body.modo-oscuro .to{
   }
   h2 {
     font-size: 22px;
-    margin: 20px 0 10px;
     text-align: center;
     font-weight: bold;
+    padding: 20px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /* Para que el padding no afecte el ancho */
+    margin: 0 auto; /* Por si hay márgenes heredados */
   }
-  .info{
+  
+  .info {
     text-align: center;
     font-size: 14px;
-    font-weight: medium;
+    font-weight: 500; /* "medium" no es un valor válido en CSS */
     
-    margin-bottom: 70px;
-    margin-left: 20PX;
+    margin: 0 auto 70px auto; /* centrado horizontal + margen inferior */
     width: 350px;
     word-wrap: break-word;
-   
-   
-   
   }
+  
   h3{
     margin-left: -20px;
   }
@@ -170,6 +177,7 @@ body.modo-oscuro .to{
     background: rgb(255, 255, 253);
     
 }
+
 .noticia:hover {
     transform: scale(1.02);
   }
@@ -179,30 +187,33 @@ body.modo-oscuro .to{
     transition: transform 0.1s ease-in-out;
   }
 
-
-
+.noticia img{
+  margin-right:  20px;
+}
 
 .texto-lado {
     flex: 1;
     text-align: left;
   margin-left: 10px;
   margin-right: -100px;
-  padding: right 30px;
+  
   
 }
 .texto{
+  padding: 10px;
    margin-left: -20px;
     width: 210px;
     word-wrap: break-word;
     color: #414141;
 }
 .subtitulo{
+  padding: 15px;
   color: #1f609e;
 }
 .imagen-lateral {
     width: 130px;
     height: 170px;
-    
+    padding: 10px;
     border-radius: 5px;
     margin-right: -10px;
 }
@@ -355,7 +366,6 @@ header {
   }
   .info{
     text-align: center;
-    margin-left: 33%;
   }
   .logo{
     margin-left: 4%;
